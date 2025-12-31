@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>[Your Name] — All About Me</title>
+  <meta name="description" content="Learn about [Your Name]: hobbies, academics, projects, and contact information." />
+  <meta property="og:title" content="[Your Name] — All About Me" />
+  <meta property="og:description" content="Hobbies, school interests, projects, and contact info." />
+  <meta property="og:image" content="/assets/og-image.svg" />
+  <link rel="icon" href="/assets/profile.svg" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-row">
+      <a class="brand" href="index.html">[Your Name]</a>
+      <nav class="main-nav">
+        <a href="about.html">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h1>Hi — I'm [Your Name]</h1>
+          <p class="lead">I play veena and percussion, like coding and robotics, and I'm learning Spanish. Welcome to my site!</p>
+          <p><a class="btn" href="#hobbies">See my hobbies</a> <a class="btn secondary" href="#contact">Contact</a></p>
+        </div>
+        <div class="hero-media">
+          <img src="assets/profile.svg" alt="Profile illustration of [Your Name]" width="240" height="240">
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="container about">
+      <h2>About</h2>
+      <p>I am a 12-year-old in 7th grade. I enjoy reading, math, and learning new things. I speak four languages and I learn Spanish at school.</p>
+      <ul class="facts">
+        <li>Grade: 7</li>
+        <li>Age: 12</li>
+        <li>Vegetarian</li>
+        <li>Have a younger sister</li>
+      </ul>
+    </section>
+
+    <section id="hobbies" class="container">
+      <h2>Hobbies</h2>
+      <div class="grid cards">
+        <article class="card">
+          <img src="/assets/hobby-veena.svg" alt="Veena instrument illustration" class="card-img">
+          <h3>Veena</h3>
+          <p>I play the veena, an Indian string instrument. I enjoy practicing melodies and rhythmic patterns.</p>
+        </article>
+
+        <article class="card">
+          <img src="assets/hobby-percussion.svg" alt="Percussion illustration" class="card-img">
+          <h3>Percussion</h3>
+          <p>I play percussion in my school band — I enjoy keeping rhythm and playing with others.</p>
+        </article>
+
+        <article class="card">
+          <img src="assets/hobby-robotics.svg" alt="Robotics illustration" class="card-img">
+          <h3>Robotics & Coding</h3>
+          <p>I like coding and building simple robots. I enjoy problem solving and learning new tech.</p>
+        </article>
+
+        <article class="card">
+          <h3>Sports & Art</h3>
+          <p>I like badminton and table tennis, and I enjoy making art in my free time.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="container">
+      <h2>Projects (Small)</h2>
+      <p>Short notes on coding or robotics projects can go here. Add links or screenshots later.</p>
+    </section>
+
+    <section id="contact" class="container contact">
+      <h2>Contact</h2>
+      <p>If you'd like to say hi, share feedback, or ask a question, please reach out via: <strong>[your-email@example.com]</strong> or link your social media.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> [Your Name]. Hosted on GitHub Pages.</p>
+    </div>
+  </footer>
+
+  <script>
+    // small script to update year (no tracking)
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
