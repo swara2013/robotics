@@ -1,0 +1,22 @@
+import serial
+from pynput import keyboard
+
+arduino = serial.Serial(port="COM6", baudrate=9600, timeout=1)
+
+def on_press(key):
+    try:
+        if key == keyboard.Key.up:
+            arduino.write(b'u')
+            print("LED ON")
+        elif key == keyboard.Key.down:
+            arduino.write(b'D')
+            print("LED OFF")
+    except Exception as e:
+        print(f"Error: {e}")
+
+def on__release(key):
+    if key == keyboard.Key.esc:
+        return False
+
+with keyboard.Listener(on_press=on_press, on_release=on_release) as listener:
+    listener.join()
