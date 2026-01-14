@@ -1,0 +1,17 @@
+const int ledPin = 13;
+
+void setup() {
+  pinMode(ledPin, OUTPUT);
+  Serial.begin(9600); // Match baud rate with Python
+}
+
+void loop() {
+  if (Serial.available() > 0) {
+    char command = Serial.read();
+    if (command == 'U') {        // Up arrow → LED ON
+      digitalWrite(ledPin, HIGH);
+    } else if (command == 'D') { // Down arrow → LED OFF
+      digitalWrite(ledPin, LOW);
+    }
+  }
+}
